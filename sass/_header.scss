@@ -1,0 +1,260 @@
+@media only screen and (max-width: 991px) {
+    .header-bottom {
+        padding: 8px 0;
+    }
+}
+// @media only screen and (max-width: 991px) {
+//     .header-sticky {
+//         z-index: 1;
+//     }
+// }
+
+.header-top {
+    padding: 9px 0;
+    border-bottom: 1px solid #2d2d2d;
+    background-color: #000c20;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-info-left ul {
+    display: flex;
+    font-size: 14px;
+    color: #7b8693;
+}
+
+.header-info-left ul li {
+    &:first-child {
+        margin-right: 70px;
+    }
+}
+
+.header-social {
+    display: flex;
+    li {
+        font-size: 14px;
+        a {
+            padding: 0 0 0 25px;
+            color: #7b8693;
+            i {
+                transition: all .3s ease-in-out;
+            }
+        }
+        &:hover {
+            i {
+                    color: #f15f22;
+                    transform: rotateY(180deg);
+                }
+            }
+    }
+}
+
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000c20;
+}
+
+.sub-menu {
+    visibility: hidden;
+    opacity: 0;
+    border-top: 5px solid $primary-color;
+    padding: 17px 0;
+    width: 170px;
+    position: absolute;
+    top: 90%;
+    transition: all 0.3s ease-out;
+    background: rgba(0,12,32,0.8);
+    li {
+        margin-left: 7px;
+        a {
+            display: block;
+            padding: 6px 10px;
+        }
+    }
+}
+
+.nav {
+    li {
+        position: relative;
+        &:hover {
+            .sub-menu {
+                visibility: visible;
+                opacity: 1;
+                top: 100%;
+            }
+        }
+    }
+}
+
+
+.nav-link {
+    padding: 39px 19px;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu-wrapper {
+    margin-right: 30px;
+}
+
+.nav-link {
+    color: #fff;
+    transition: all 0.2s linear;
+    &:hover {
+        color: #f15f22;
+    }
+}
+
+.drop-down-link {
+    color: #fff;
+    transition: all 0.2s linear;
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+.header-btn {
+    position: relative;
+    background-color: #ff5f13;
+    border-radius: 5px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 25px 35px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    border: none;
+    cursor: pointer;   
+    line-height: 0;
+    color: #fff;
+    transition: all .3s;
+    overflow: hidden;
+    outline: none;
+    z-index: 1;
+    &:hover {
+        color: #fff;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background-color: lighten($primary-color, 7%);
+        border-radius: 50%;
+        transform: translate(-10%, 30%) scale(.1);
+        opacity: 0;
+        z-index: -1;
+        transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+    }
+  
+    &:hover::after {
+        opacity: 1;
+        transform: scale(1) translate(-10%, -20%) scale(1);
+    }
+}
+
+.header-sticky {
+    background-color: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    animation: .5s ease-in-out 0s normal none 1 running fadeInDown;
+}
+
+.menu-btn {
+    position: relative;
+    display: block;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(211, 208, 208);
+    padding: 6px 14px;
+    font-size: 18px;
+    border-radius: 4px;
+    &:hover {
+        color: #fff;
+    }
+}
+
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #000c20;
+    overflow-x: hidden;
+    transition: all 0.5s ease-in-out;
+    border: none;
+    // padding-top: 20px;
+}
+
+.open {
+    width: 35%;
+}
+
+.menu-list {
+        width: 100%;
+        text-align: left;
+}
+
+.menu-item {
+    transition: all .3s;
+    a {
+        padding: 16px;
+        padding-left: 24px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #ded9d9;
+        display: block;
+        transition: all 0.2s;
+        &:hover {
+            color: #fff;
+        }
+    }
+    li {
+        margin-left: 12px;
+    }
+}
+
+.menu-item {
+    .close-btn {
+        padding: 0;
+        text-align: right;
+        padding: 20px 20px;
+    }
+    a i {
+        margin-left: 8px;
+    }
+}
+
+.active {
+    background-color: $primary-color;
+    opacity: 1;
+}
+
+.scroll-sidenav {
+    background-color: #000;
+}
+
+.drop-menu {
+    display: none;
+}
+
+
+
+
+

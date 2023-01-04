@@ -1,0 +1,30 @@
+@media (max-width: 575px) {
+    .hero-content .hero-header h1 {
+        font-size: 40px;
+        line-height: 1.2;
+    }
+    .search-box {
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-input-form {
+        width: 100%;
+        input {
+            margin-bottom: 20px;
+            border: none;
+            font-size: 18px;
+            height: 60px;
+            color: #777;
+            font-weight: 400;
+            padding: 9px 33px 9px 32px;
+        }
+    }
+    .search-btn {
+        width: 100%;
+    }
+    .input-form {
+        input {
+            width: 100%;
+        }
+    }
+}
